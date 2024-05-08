@@ -14,17 +14,16 @@ import { Point, Vertex } from "./engine/common";
 import ComputePipeline from "./engine/compute-pipeline";
 import { getRandomFloat } from "./utils";
 
+const isMobile = /Android/i.test(navigator.userAgent);
 const WIDTH = window.innerWidth;
 const HEIGHT = window.innerHeight;
 const TANK_GROUND = -0.5;
-const TANK_WALL = /Android/i.test(navigator.userAgent) ? 0.1 : 0.2;
+const TANK_WALL = isMobile ? 0.15 : 0.2;
 const CREATE_PARTICLE_PER_FRAME = 4;
-const NUM_OF_VERTEX_PER_WORKGROUP = /Android/i.test(navigator.userAgent)
-  ? 5
-  : 20;
+const NUM_OF_VERTEX_PER_WORKGROUP = isMobile ? 4 : 10;
 const NUM_OF_PARTICLE = 256 * NUM_OF_VERTEX_PER_WORKGROUP;
-const RADIUS = 0.06;
-const DELTA = 0.05;
+const RADIUS = isMobile ? 0.1 : 0.08;
+const DELTA = 0.04;
 
 async function main() {
   // Initialize

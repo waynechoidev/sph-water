@@ -42,7 +42,7 @@ fn computeSomething(
         
         let front:vec3f = normalize(camera.position - input.position);
         let right:vec3f = normalize(cross(camera.up, front));
-        let radius:f32 = constant.radius / 2;
+        let radius:f32 = constant.radius / 3;
 
         for (var i = 0; i < 6; i++) {
             let newPos:vec3f = input.position + pos[i].x * right.xyz * radius + pos[i].y * up.xyz * radius;
