@@ -109,7 +109,6 @@ export default class Camera {
     });
 
     document.addEventListener(endEvent, () => {
-      console.log(this._rotate);
       this._isDragging = false;
     });
   }
