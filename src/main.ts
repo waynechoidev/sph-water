@@ -10,7 +10,6 @@ import Pipeline from "@/engine/pipeline";
 import { vec3, mat4, vec2 } from "@external/glmatrix/index";
 import { toRadian } from "@external/glmatrix/common.js";
 import Camera from "./engine/camera";
-import Cubemap from "./engine/cubemap";
 import { Point, Vertex } from "./engine/common";
 import ComputePipeline from "./engine/compute-pipeline";
 import { getRandomFloat } from "./utils";
@@ -34,18 +33,6 @@ async function main() {
   if (!env.device) {
     return;
   }
-
-  // Textures
-  const baseUrl = "";
-  const envCubemap = new Cubemap(env.device);
-  await envCubemap.initialize([
-    baseUrl + "cubemap/px.jpg",
-    baseUrl + "cubemap/nx.jpg",
-    baseUrl + "cubemap/py.jpg",
-    baseUrl + "cubemap/ny.jpg",
-    baseUrl + "cubemap/pz.jpg",
-    baseUrl + "cubemap/nz.jpg",
-  ]);
 
   // Pipelines
   const computeUpdateGridPipeline = new ComputePipeline({
