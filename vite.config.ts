@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import glsl from "vite-plugin-glsl";
 
 const config = defineConfig({
-  base: "/n-body-problem/",
+  base: "/sph-water/",
   server: {
     port: 8888,
   },

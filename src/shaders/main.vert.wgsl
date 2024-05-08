@@ -10,5 +10,6 @@
   output.position = uni.projection * uni.view * vec4f(input.position, 1.0);
   output.texCoord = input.texCoord;
   output.color = input.color;
+  output.life = input.life;
   return output;
 }

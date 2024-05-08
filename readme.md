@@ -1,5 +1,5 @@
-## N-body problem
+## SPH water
 
-[Sample](https://waynechoidev.github.io/n-body-problem/)
+[Sample](https://waynechoidev.github.io/sph-water/)
 
-[blog](https://waynechoi.dev/n-body-problem/)
+[blog](https://waynechoi.dev/sph-water/)

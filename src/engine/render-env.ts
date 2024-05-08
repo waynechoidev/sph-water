@@ -81,7 +81,7 @@ export default class RenderEnv {
       colorAttachments: [
         {
           view: canvasTexture.createView(),
-          clearValue: [0, 0, 0, 1],
+          clearValue: [1, 1, 1, 1],
           loadOp: "clear",
           storeOp: "store",
         },

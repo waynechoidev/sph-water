@@ -24,7 +24,7 @@ export default class Camera {
     this._position = position;
     this._center = center;
     this._up = up;
-    this._rotate = vec2.fromValues(0, 0);
+    this._rotate = vec2.fromValues(-10, 25);
 
     this._isDragging = false;
     this._initialX = 0;
@@ -109,6 +109,7 @@ export default class Camera {
     });
 
     document.addEventListener(endEvent, () => {
+      console.log(this._rotate);
       this._isDragging = false;
     });
   }
