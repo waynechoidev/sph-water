@@ -3,7 +3,7 @@
 @group(0) @binding(0) var<storage, read_write> points: array<Point>;
 @group(0) @binding(1) var<uniform> constant: Constant;
 
-const COR:f32 = 0.0;
+const COR:f32 = 0.1;
 const MASS:f32 = 1.0;
 
 @compute @workgroup_size(256) fn computeSomething(
